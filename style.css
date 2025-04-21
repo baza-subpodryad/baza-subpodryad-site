@@ -163,3 +163,82 @@ footer {
   display: inline-block;
   margin-bottom: 8px;
 }
+.order-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 20px 24px;
+  margin: 20px auto;
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.order-card .left, .order-card .right {
+  flex: 1 1 48%;
+}
+
+.order-card .number {
+  color: #1a0dab;
+  text-decoration: underline;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.order-card .badge {
+  background: #E30611;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.order-card .badge-region {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.order-card .slogan {
+  font-size: 13px;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.order-card .label {
+  font-weight: bold;
+  color: #333;
+  margin-right: 6px;
+}
+
+.order-card .value {
+  margin-bottom: 6px;
+}
+
+.order-card .price-badge {
+  background: #FEEBEA;
+  color: #E30611;
+  font-weight: bold;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.order-card .date-block {
+  font-size: 13px;
+  color: #666;
+}
+
+.order-card .date-block strong {
+  color: #222;
+}
