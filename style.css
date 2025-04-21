@@ -20,13 +20,14 @@ body {
 }
 
 .logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  margin-right: 14px;
-  object-fit: cover;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  height: 64px;
+  width: auto;
+  border-radius: 0;
+  margin-right: 0;
+  box-shadow: none;
+  object-fit: contain;
 }
+
 
 .site-title {
   display: flex;
