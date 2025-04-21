@@ -135,18 +135,29 @@ footer {
 }
 
 .order-card {
-  display: flex;
-  justify-content: space-between;
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   padding: 24px 32px;
-  margin: 20px auto;
+  margin-bottom: 24px;
   max-width: 960px;
   width: 100%;
-  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
   color: #222;
-  line-height: 1.6;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.order-card .left {
+  flex: 1;
+}
+
+.order-card .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
 }
 
 
