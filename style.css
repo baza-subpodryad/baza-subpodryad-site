@@ -139,196 +139,97 @@ footer {
   justify-content: space-between;
   align-items: flex-start;
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  padding: 24px 32px;
+  border-left: 4px solid #E30611;
+  border-radius: 8px;
+  padding: 20px 32px;
   margin-bottom: 24px;
-  max-width: 960px;
   width: 100%;
-  gap: 40px;
-  font-size: 15px;
-  color: #222;
+  max-width: 1080px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 14px;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 .order-card .left {
   flex: 1;
+  padding-right: 20px;
 }
 
 .order-card .right {
+  text-align: right;
+  min-width: 220px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 12px;
-}
-
-
-.order-card .price {
-  font-size: 18px;
-  color: #E30611;
-  font-weight: bold;
-  margin: 8px 0;
-}
-
-.order-card .badge {
-  background: #E30611;
-  color: white;
-  padding: 4px 10px;
-  border-radius: 6px;
-  font-size: 12px;
-  display: inline-block;
-  margin-bottom: 8px;
-}
-.order-card {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  padding: 20px 24px;
-  margin: 20px auto;
-  max-width: 700px;
-  width: 100%;
-  display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-
-.order-card .left, .order-card .right {
-  flex: 1 1 48%;
-}
-
-.order-card .number {
-  color: #1a0dab;
-  text-decoration: underline;
-  font-weight: bold;
-  display: block;
-  margin-bottom: 8px;
 }
 
 .order-card .badge {
-  background: #E30611;
+  background-color: #E30611;
   color: white;
-  padding: 4px 10px;
-  border-radius: 6px;
   font-size: 12px;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 4px;
   display: inline-block;
-  margin-bottom: 8px;
-}
-
-.order-card .badge-region {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #444;
+  margin-bottom: 6px;
 }
 
 .order-card .slogan {
   font-size: 13px;
-  margin-bottom: 8px;
   color: #666;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.order-card .number {
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #3C3C3C;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.order-card .badge-region {
+  background-color: #e6f0ff;
+  color: #004085;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin: 6px 0;
+  display: inline-block;
+}
+
+.order-card .status {
+  font-size: 13px;
+  color: #28A745;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .order-card .label {
-  font-weight: bold;
-  color: #333;
-  margin-right: 6px;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 2px;
 }
 
 .order-card .value {
-  margin-bottom: 6px;
+  font-size: 14px;
+  color: #222;
+  margin-bottom: 8px;
 }
 
 .order-card .price-badge {
-  background: #FEEBEA;
-  color: #E30611;
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px 14px;
-  border-radius: 10px;
-  text-align: center;
-  display: inline-block;
-  margin-bottom: 12px;
-  font-size: 16px;
+  color: #E30611;
+  margin-bottom: 10px;
   text-decoration: none;
 }
 
 .order-card .date-block {
-  font-size: 13px;
-  color: #666;
-}
-
-.order-card .date-block strong {
-  color: #222;
-}
-.order-card .left {
-  flex: 1;
-}
-
-.order-card .right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: space-between;
-  min-width: 220px;
-  text-align: right;
-}
-
-.order-card .badge {
-  background: #E30611;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 13px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.order-card .slogan {
-  font-size: 14px;
+  font-size: 12px;
   color: #555;
-  margin-bottom: 10px;
-}
-
-.order-card .number {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: #1a0dab;
-  text-decoration: underline;
-}
-
-.order-card .badge-region {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #333;
-}
-
-.order-card .status {
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.order-card .label {
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.order-card .value {
-  margin-bottom: 8px;
-}
-
-.order-card .price-badge {
-  font-size: 20px;
-  color: #E30611;
-  font-weight: bold;
-  background: #ffe5e5;
-  padding: 8px 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 16px;
-}
-
-.order-card .date-block div {
-  font-size: 13px;
-  color: #444;
-  margin-bottom: 4px;
+  line-height: 1.4;
 }
