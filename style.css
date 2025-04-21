@@ -106,3 +106,24 @@ footer {
   color: #444;
   background: #f9f9f9;
 }
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 40px;
+}
+
+.search-box input {
+  width: 100%;
+  max-width: 480px;
+  padding: 14px 18px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: border-color 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: #E30611;
+  outline: none;
+}
