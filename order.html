@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Разместить заказ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo-block">
+      <img class="logo" src="brand-logo.png" alt="База Субподряд" />
+    </div>
+    <nav class="main-nav">
+      <a class="nav-button" href="index.html">Главная</a>
+      <a class="nav-button alt" href="register-executor.html">Стать исполнителем</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Разместить заказ</h1>
+    <p>Заполните заявку — мы покажем её всем проверенным исполнителям</p>
+  </div>
+
+  <div style="max-width: 720px; margin: 40px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); font-family: 'Segoe UI', sans-serif;">
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>📍 Регион / город</label>
+        <input type="text" name="region" required />
+      </div>
+
+      <div class="form-group">
+        <label>🏗 Адрес объекта</label>
+        <input type="text" name="address" required />
+      </div>
+
+      <div class="form-group">
+        <label for="work-types">📂 Типы работ</label>
+        <div class="dropdown-checkbox">
+          <button type="button" class="dropdown-toggle" onclick="toggleCheckboxes()">Выбрать виды работ</button>
+          <div id="checkboxes" class="checkbox-list">
+            <label><input type="checkbox" name="workTypes[]" value="Бетонирование"> Бетонирование</label>
+            <label><input type="checkbox" name="workTypes[]" value="Кровля"> Кровля</label>
+            <label><input type="checkbox" name="workTypes[]" value="Отделка"> Отделка</label>
+            <label><input type="checkbox" name="workTypes[]" value="Электрика"> Электрика</label>
+            <label><input type="checkbox" name="workTypes[]" value="Вентиляция"> Вентиляция</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>📝 Комментарии / пожелания</label>
+        <textarea name="comment" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>ИНН организации (необязательно)</label>
+        <input type="text" name="inn" />
+      </div>
+
+      <div class="form-group">
+        <label>📄 Номер контракта (если есть)</label>
+        <input type="text" name="contract" />
+      </div>
+
+      <div class="form-group">
+        <label>📞 Контактный телефон</label>
+        <input type="tel" name="phone" placeholder="+7 900 000 00 00" required />
+      </div>
+
+      <div class="form-group">
+        <label>🗂 Загрузить файл / смету</label>
+        <input type="file" name="attachment" accept=".pdf,.doc,.docx,.xlsx,.xls" />
+      </div>
+
+      <div class="form-group" style="display: flex; gap: 16px; margin-top: 30px;">
+        <button class="nav-button" type="submit">📤 Отправить заказ</button>
+        <button class="nav-button alt" type="button" onclick="alert('Мы с вами свяжемся!')">🆘 Требую поддержки</button>
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <div style="margin-top: 40px; text-align: center; color: #666;">
+      © 2025 База Субподряд — <a href="https://t.me/Baza_Subpodryad" target="_blank">Telegram</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleCheckboxes() {
+      const box = document.getElementById("checkboxes");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
+</body>
+</html>
