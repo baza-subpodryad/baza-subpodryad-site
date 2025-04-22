@@ -1,5 +1,3 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("orders-container");
 
@@ -29,6 +27,21 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
         `;
         container.appendChild(card);
+      });
+
+      // Поиск по ключевым словам
+      document.querySelector(".search-input").addEventListener("input", function () {
+        const value = this.value.trim().toLowerCase();
+
+        const cards = document.querySelectorAll(".order-card");
+        cards.forEach((card) => {
+          const text = card.textContent.toLowerCase();
+          if (text.includes(value)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
       });
     })
     .catch((err) => {
