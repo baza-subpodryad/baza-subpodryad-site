@@ -341,3 +341,11 @@ textarea {
   text-align: center;
   color: #333;
 }
+.form-container {
+  max-width: 1080px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
