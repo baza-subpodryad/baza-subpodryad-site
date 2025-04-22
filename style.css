@@ -233,3 +233,19 @@ footer {
   color: #555;
   line-height: 1.4;
 }
+.cta-button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #E30611;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #b9000f;
+}
