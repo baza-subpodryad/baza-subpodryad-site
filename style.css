@@ -266,3 +266,57 @@ footer {
 .how-it-works-btn:hover {
   background-color: #c1000f;
 }
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea,
+.dropdown-toggle {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.dropdown-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown-toggle {
+  text-align: left;
+  background: white;
+  cursor: pointer;
+}
+
+.checkbox-list {
+  display: none;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  background: #f9f9f9;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.checkbox-list label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
