@@ -348,4 +348,25 @@ textarea {
   align-items: center;
   padding: 40px 20px;
 }
+.register-benefits {
+  margin-top: 60px;
+  padding: 30px;
+  border: 2px dashed #E30611;
+  border-radius: 12px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.register-benefits h2 {
+  font-size: 20px;
+  color: #E30611;
+  margin-bottom: 16px;
+}
+
+.register-benefits p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+}
 
