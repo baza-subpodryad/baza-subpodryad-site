@@ -376,5 +376,22 @@ textarea {
   margin-top: 32px;
   flex-wrap: wrap;
 }
+.cta-button.alt {
+  background: white;
+  color: #3C3C3C;
+  border: 2px solid #3C3C3C;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button.alt:hover {
+  background-color: #3C3C3C;
+  color: white;
+}
 
 
