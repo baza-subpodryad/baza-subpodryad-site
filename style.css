@@ -373,7 +373,8 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 24px;
-  flex-wrap: wrap;
   margin-top: 32px;
+  flex-wrap: wrap;
 }
+
 
