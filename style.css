@@ -129,10 +129,10 @@ footer {
 }
 .orders-section {
   padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 720px;
+  margin: 0 auto;
 }
+
 
 .order-card {
   display: flex;
@@ -345,9 +345,23 @@ textarea {
 .orders-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  max-width: 720px;
   padding: 40px 20px;
+  margin: 0 auto;
 }
+.orders-wrapper h2 {
+  margin-top: 32px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.orders-wrapper p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .register-benefits {
   margin-top: 60px;
   padding: 30px;
