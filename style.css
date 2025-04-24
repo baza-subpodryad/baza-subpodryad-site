@@ -343,13 +343,11 @@ textarea {
   color: #333;
 }
 .orders-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 720px;
+  width: 100%;
   padding: 40px 20px;
   margin: 0 auto;
 }
+
 .orders-wrapper h2 {
   margin-top: 32px;
   font-size: 22px;
