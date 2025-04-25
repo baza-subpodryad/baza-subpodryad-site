@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админка — Добавление заказа</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .admin-wrapper {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .admin-output {
+      background: #f4f6f8;
+      border: 1px solid #ccc;
+      padding: 16px;
+      margin-top: 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <main class="admin-wrapper">
+    <h1>Добавление нового заказа</h1>
+
+    <form id="orderForm" class="registration-form">
+      <section class="form-group">
+        <label for="title">Название заказа</label>
+        <input type="text" id="title" name="title" required />
+      </section>
+
+      <section class="form-group">
+        <label for="city">Город</label>
+        <input type="text" id="city" name="city" required />
+      </section>
+
+      <section class="form-group">
+        <label for="region">Регион</label>
+        <input type="text" id="region" name="region" required />
+      </section>
+
+      <section class="form-group">
+        <label for="work">Вид работ</label>
+        <input type="text" id="work" name="work" required />
+      </section>
+
+      <section class="form-group">
+        <label for="price">Сумма заказа</label>
+        <input type="text" id="price" name="price" required />
+      </section>
+
+      <section class="form-group">
+        <label for="contactPrice">Цена за контакт</label>
+        <input type="text" id="contactPrice" name="contactPrice" required />
+      </section>
+
+      <section class="form-group">
+        <label for="description">Описание заказа (для страницы)</label>
+        <textarea id="description" name="description" rows="4"></textarea>
+      </section>
+
+      <section class="form-group">
+        <label for="adminNote">Комментарий от администрации</label>
+        <textarea id="adminNote" name="adminNote" rows="3"></textarea>
+      </section>
+
+      <button type="submit" class="cta-button">Активация</button>
+    </form>
+
+    <div id="outputJSON" class="admin-output"></div>
+    <div id="outputHTML" class="admin-output"></div>
+  </main>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const id = "order-" + Date.now();
+      const filename = id + ".html";
+
+      const title = form.title.value;
+      const city = form.city.value;
+      const region = form.region.value;
+      const work = form.work.value;
+      const price = form.price.value;
+      const contactPrice = form.contactPrice.value;
+      const description = form.description.value;
+      const adminNote = form.adminNote.value;
+
+      const json = {
+        id: id,
+        title: title,
+        region: region,
+        city: city,
+        price: price,
+        link: filename
+      };
+
+      const html = `<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>${title}</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-block">
+      <img class="logo" src="brand-logo.png" alt="База Субподряд">
+    </div>
+    <nav class="main-nav">
+      <a class="nav-button" href="index.html">Главная</a>
+    </nav>
+  </header>
+  <main class="orders-section">
+    <article class="order-card">
+      <div class="left">
+        <h2>${title}</h2>
+        <p><strong>Город:</strong> ${city}</p>
+        <p><strong>Регион:</strong> ${region}</p>
+        <p><strong>Вид работ:</strong> ${work}</p>
+        <p><strong>Сумма подряда:</strong> ${price}</p>
+        <p><strong>Описание:</strong> ${description}</p>
+      </div>
+      <div class="right">
+        <span class="badge">Генеральный подряд</span>
+        <a href="#" class="cta-button">Оплатить за ${contactPrice}</a>
+      </div>
+    </article>
+    <section class="admin-note">
+      <h3>Комментарий от администрации</h3>
+      <p>${adminNote}</p>
+    </section>
+  </main>
+  <footer>
+    <div style="margin-top: 40px; text-align: center; color: #666;">
+      © 2025 База Субподряд
+    </div>
+  </footer>
+</body>
+</html>`;
+
+      document.getElementById("outputJSON").textContent = `📦 JSON (добавить в orders.json):\n` + JSON.stringify(json, null, 2);
+      document.getElementById("outputHTML").textContent = `📄 HTML (${filename}):\n` + html;
+    });
+  </script>
+</body>
+</html>
