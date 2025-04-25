@@ -21,17 +21,21 @@
     <form class="registration-form">
 
       <section class="form-group">
+        <label for="contact-person">ФИО ответственного лица</label>
+        <input type="text" id="contact-person" name="contact-person" required />
+        <textarea readonly class="note-text">Укажите полное имя человека, который будет представлять компанию и принимать звонки.</textarea>
+      </section>
+
+      <section class="form-group">
         <label for="company">Название компании / ИП</label>
         <input type="text" id="company" name="company" required />
+        <small>Полное наименование юридического лица или индивидуального предпринимателя.</small>
+      </section>
 
       <section class="form-group">
         <label for="phone">Телефон</label>
         <input type="tel" id="phone" name="phone" required />
-        <small>Основной номер для связи, с WatsApp.</small>
-      </section>
-       <section class="form-group">
-        <input type="tel" id="phone" name="phone" required />
-        <small>Дополнительный номер для связи.</small>
+        <small>Основной номер для связи — мобильный или рабочий.</small>
       </section>
 
       <section class="form-group">
@@ -45,16 +49,11 @@
         <input type="url" id="website" name="website" />
         <small>Можно оставить пустым, если сайта нет.</small>
       </section>
-<section class="form-group">
-        <label for="telegram">Телеграм (если есть)</label>
-        <input type="url" id="telegram" name="telegram" />
-        <small>Можно оставить пустым, если канала нет.</small>
-      </section>
+
       <section class="form-group">
         <label for="inn">ИНН</label>
         <input type="text" id="inn" name="inn" required />
-        <small>Мы используем ИНН для проверки надёжности и допуска к заказам. Он не отображается в открытом доступе.</small>
-
+        <small>Идентификационный номер налогоплательщика — используется для проверки надёжности.</small>
       </section>
 
       <section class="form-group">
