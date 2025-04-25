@@ -28,8 +28,8 @@
 
     <form id="orderForm" class="registration-form">
       <section class="form-group">
-        <label for="title">Название заказа</label>
-        <input type="text" id="title" name="title" required />
+        <label for="id">Номер заказа</label>
+        <input type="text" id="id" name="id" placeholder="000001" required />
       </section>
 
       <section class="form-group">
@@ -38,18 +38,41 @@
       </section>
 
       <section class="form-group">
-        <label for="region">Регион</label>
-        <input type="text" id="region" name="region" required />
+        <label for="status">Статус приёма заявок</label>
+        <select id="status" name="status">
+          <option value="Приём заявок открыт">Открыт</option>
+          <option value="Приём заявок закрыт">Закрыт</option>
+        </select>
       </section>
 
       <section class="form-group">
-        <label for="work">Вид работ</label>
-        <input type="text" id="work" name="work" required />
+        <label for="object">Объект</label>
+        <input type="text" id="object" name="object" required />
       </section>
 
       <section class="form-group">
-        <label for="price">Сумма заказа</label>
+        <label for="client">Заказчик</label>
+        <input type="text" id="client" name="client" required />
+      </section>
+
+      <section class="form-group">
+        <label for="price">Сумма подряда</label>
         <input type="text" id="price" name="price" required />
+      </section>
+
+      <section class="form-group">
+        <label for="datePublished">Размещено</label>
+        <input type="date" id="datePublished" name="datePublished" required />
+      </section>
+
+      <section class="form-group">
+        <label for="dateUpdated">Обновлено</label>
+        <input type="date" id="dateUpdated" name="dateUpdated" required />
+      </section>
+
+      <section class="form-group">
+        <label for="dateEnd">Окончание приёма заявок</label>
+        <input type="date" id="dateEnd" name="dateEnd" required />
       </section>
 
       <section class="form-group">
@@ -79,22 +102,25 @@
       e.preventDefault();
 
       const form = e.target;
-      const id = "order-" + Date.now();
-      const filename = id + ".html";
+      const id = form.id.value;
+      const filename = `order-${id}.html`;
 
-      const title = form.title.value;
       const city = form.city.value;
-      const region = form.region.value;
-      const work = form.work.value;
+      const status = form.status.value;
+      const object = form.object.value;
+      const client = form.client.value;
       const price = form.price.value;
+      const datePublished = form.datePublished.value;
+      const dateUpdated = form.dateUpdated.value;
+      const dateEnd = form.dateEnd.value;
       const contactPrice = form.contactPrice.value;
       const description = form.description.value;
       const adminNote = form.adminNote.value;
 
       const json = {
         id: id,
-        title: title,
-        region: region,
+        title: object,
+        region: "",
         city: city,
         price: price,
         link: filename
@@ -105,7 +131,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${title}</title>
+  <title>${object}</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -120,22 +146,36 @@
   <main class="orders-section">
     <article class="order-card">
       <div class="left">
-        <h2>${title}</h2>
-        <p><strong>Город:</strong> ${city}</p>
-        <p><strong>Регион:</strong> ${region}</p>
-        <p><strong>Вид работ:</strong> ${work}</p>
-        <p><strong>Сумма подряда:</strong> ${price}</p>
-        <p><strong>Описание:</strong> ${description}</p>
+        <span class="badge">ГЕНПОДРЯД</span>
+        <p><em>Прямые контакты без посредников</em></p>
+        <p><strong>№ ${id}</strong> <span class="badge-region">📍 ${city}</span></p>
+        <p style="color: green; font-weight: bold;">${status}</p>
+        <p><span class="label">Объект</span><br>${object}</p>
+        <p><span class="label">Заказчик</span><br>${client}</p>
       </div>
       <div class="right">
-        <span class="badge">Генеральный подряд</span>
-        <a href="#" class="cta-button">Оплатить за ${contactPrice}</a>
+        <p class="price-badge">${price}</p>
+        <div class="date-block">
+          Размещено: <strong>${datePublished}</strong><br>
+          Обновлено: <strong>${dateUpdated}</strong><br>
+          Окончание подачи заявок: <strong>${dateEnd}</strong>
+        </div>
       </div>
     </article>
-    <section class="admin-note">
+
+    <section class="support-notice">
+      <h3>Описание заказа</h3>
+      <p>${description}</p>
+    </section>
+
+    <section class="support-banner">
       <h3>Комментарий от администрации</h3>
       <p>${adminNote}</p>
     </section>
+
+    <div style="text-align:center">
+      <a class="cta-button" href="payment.html?order=${id}">Оплатить контакт за ${contactPrice}</a>
+    </div>
   </main>
   <footer>
     <div style="margin-top: 40px; text-align: center; color: #666;">
