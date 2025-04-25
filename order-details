@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Детали заказа — База Субподряд</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-block">
+      <img class="logo" src="brand-logo.png" alt="База Субподряд">
+    </div>
+    <nav class="main-nav">
+      <a class="nav-button" href="index.html">Главная</a>
+    </nav>
+  </header>
+
+  <main class="orders-section">
+    <article class="order-card">
+      <div class="left">
+        <h2>Монтаж кровли, ЖК "Солнечный квартал"</h2>
+        <p><strong>Город:</strong> Казань</p>
+        <p><strong>Регион:</strong> Республика Татарстан</p>
+        <p><strong>Вид работ:</strong> Кровельные работы</p>
+        <p><strong>Сумма подряда:</strong> от 1 200 000 ₽</p>
+        <p><strong>Сроки:</strong> до 15 июня 2025</p>
+        <p><strong>Описание:</strong> Требуется монтаж кровли на пятиэтажном доме. Общая площадь около 1400 м². Материалы предоставляются заказчиком.</p>
+      </div>
+      <div class="right">
+        <span class="badge">Генеральный подряд</span>
+        <a href="#" class="cta-button">Оплатить и получить контакт</a>
+      </div>
+    </article>
+
+    <section class="admin-note">
+      <h3>Комментарий от администрации</h3>
+      <p>
+        Контакт с заказчиком пока не установлен, но объект подтверждён. Телефон активен и опубликован недавно.
+        Мы не гарантируем немедленный отклик, но предлагаем достоверную информацию о проекте.
+      </p>
+      <p>
+        Вы вправе принять решение об оплате на основе текущих данных. Все детали проверяются вручную.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="margin-top: 40px; text-align: center; color: #666;">
+      © 2025 База Субподряд — <a href="https://t.me/Baza_Subpodryad" target="_blank">Telegram</a>
+    </div>
+  </footer>
+</body>
+</html>
