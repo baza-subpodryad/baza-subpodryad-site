@@ -102,7 +102,7 @@
       e.preventDefault();
 
       const form = e.target;
-      const id = form.id.value;
+      const id = form.id.value.trim();
       const filename = `order-${id}.html`;
 
       const city = form.city.value;
@@ -123,7 +123,12 @@
         region: "",
         city: city,
         price: price,
-        link: filename
+        link: filename,
+        client: client,
+        status: status,
+        datePublished: datePublished,
+        dateUpdated: dateUpdated,
+        dateEnd: dateEnd
       };
 
       const html = `<!DOCTYPE html>
