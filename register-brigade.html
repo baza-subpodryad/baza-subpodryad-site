@@ -16,54 +16,61 @@
     </nav>
   </header>
 
-  <main class="form-wrapper">
+  <main class="form-wrapper" style="max-width: 720px; margin: 40px auto; padding: 0 20px;">
     <h1>Регистрация строительной бригады</h1>
     <form class="registration-form">
 
       <section class="form-group">
         <label for="leader-name">ФИО бригадира</label>
         <input type="text" id="leader-name" name="leader-name" required />
-        <div class="note-text">Укажите полное имя человека, который отвечает за вашу бригаду и будет выходить на связь.</div>
+        <small>Укажите полное имя человека, который отвечает за вашу бригаду и будет выходить на связь.</small>
       </section>
 
       <section class="form-group">
         <label for="phone">Номер телефона</label>
         <input type="tel" id="phone" name="phone" required />
-        <div class="note-text">Основной номер для связи, желательно с WhatsApp или Telegram.</div>
+        <small>Основной номер для связи, желательно с WhatsApp или Telegram.</small>
       </section>
 
       <section class="form-group">
         <label for="city">Город</label>
         <input type="text" id="city" name="city" required />
-        <div class="note-text">Укажите город, в котором базируется ваша бригада.</div>
+        <small>Укажите город, в котором базируется ваша бригада.</small>
       </section>
 
       <section class="form-group">
         <label for="region">Область / регион</label>
         <input type="text" id="region" name="region" />
-        <div class="note-text">Например: Московская область, Краснодарский край и т.п.</div>
+        <small>Например: Московская область, Краснодарский край и т.п.</small>
       </section>
 
       <section class="form-group">
         <label for="people">Сколько человек в бригаде?</label>
         <input type="number" id="people" name="people" min="1" required />
-        <div class="note-text">Укажите среднее количество рабочих в вашей бригаде.</div>
+        <small>Укажите среднее количество рабочих в вашей бригаде.</small>
       </section>
 
       <section class="form-group">
         <label for="specialization">Специализация</label>
         <textarea id="specialization" name="specialization" placeholder="Например: кровля, фасады, бетонные работы..." rows="3"></textarea>
-        <div class="note-text">Опишите типы работ, которые вы выполняете, и опыт вашей бригады.</div>
+        <small>Опишите типы работ, которые вы выполняете, и опыт вашей бригады.</small>
       </section>
 
-      <button type="submit" class="cta-button">Отправить</button>
+      <section class="form-group">
+        <label for="notes">Комментарий (необязательно)</label>
+        <textarea id="notes" name="notes" rows="3"></textarea>
+        <small>Можете указать дополнительную информацию или задать вопрос.</small>
+      </section>
+
+      <button type="submit" class="cta-button">Зарегистрироваться</button>
     </form>
   </main>
 
   <footer>
-    <div class="footer">
+    <div style="margin-top: 40px; text-align: center; color: #666;">
       © 2025 База Субподряд — <a href="https://t.me/Baza_Subpodryad" target="_blank">Telegram</a>
     </div>
   </footer>
 </body>
 </html>
+
