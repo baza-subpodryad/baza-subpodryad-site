@@ -457,6 +457,34 @@ textarea {
 .form-wrapper {
   padding-top: 100px;
 }
+/* Оформление блока описания заказа */
+.info-block {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin: 40px auto;
+  max-width: 720px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-block h2 {
+  font-size: 22px;
+  color: #E30611;
+  margin-bottom: 16px;
+}
+
+.info-block p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Специальное оформление для комментария от администрации */
+.admin-comment {
+  background: #f4faff;
+  border: 1px solid #d0e7ff;
+}
 
 
 
